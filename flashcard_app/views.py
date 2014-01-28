@@ -35,3 +35,7 @@ def create_card(request):
 	}
 	return render(request, 'create_card.html', context)
 
+def delete_card(request, pk):
+	Card.objects.filter(pk=pk).delete()
+	return redirect(to='list_cards')
+

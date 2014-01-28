@@ -1,5 +1,6 @@
 {% block content %}
+	<p><a href="{% url 'create_card' %}">Add</a></p>
 	{% for card in cards %}
-		{{card.front}} | <a href="{% url 'show_card' card.pk %}">click</a>
+		<p>{{card.front}} | <a href="{% url 'show_card' card.pk %}">click</a> | <a href="{% url 'delete_card' card.pk %}">delete</a></p>
 	{% endfor %}
 {% endblock %}
