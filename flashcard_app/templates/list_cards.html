@@ -1,0 +1,5 @@
+{% block content %}
+	{% for card in cards %}
+		{{card.front}} | <a href="{% url 'show_card' card.pk %}">click</a>
+	{% endfor %}
+{% endblock %}

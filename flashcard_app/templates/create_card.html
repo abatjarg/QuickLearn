@@ -1,0 +1,10 @@
+{% block content %}
+<form method="post">
+	<h1>Front of the card: </h1>
+	<p>{{formset.front}}</p>
+	<h1>Back of the card: </h1>
+	<p>{{formset.back}}</p>
+	{% csrf_token %}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
